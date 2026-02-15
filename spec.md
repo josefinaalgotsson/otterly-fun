@@ -27,10 +27,24 @@ I want to create a user-friendly web interface for parents who wish to enroll th
 - **Booking System:**
   - Parents can book a place in a course directly from the schedule
   - Upon booking, parents receive an email with an introduction and payment information
-- **Future Features:**
-  - AI-powered chat for parents to ask questions about courses, schedules, or other topics
-  - Merchandise (swimming badges, clothes with logo print) available for order or purchase through the website
-  - Reviews page where customers can write about their experience with the swim school
+**Future Features:**
+
+Looking ahead, several enhancements are planned to further improve the experience for both parents and trainers, and to streamline course administration:
+
+### AI-Powered WhatsApp Bot
+  - Integrate an AI-driven bot on WhatsApp to assist parents with common questions about courses, payment, and booking.
+  - Enable the bot to handle bookings directly, making the process more convenient and accessible.
+
+### Mobile App for Parents
+  - Develop a mobile application to help parents manage their bookings and payments.
+  - The app will simplify interactions with the course and provide direct communication with the trainer.
+  - Features may include notifications, course updates, and easy access to course materials or schedules.
+
+### Trainer Login and Session Logs
+  - Allow trainers to log in via the website to access administrative features.
+  - Enable trainers to keep logs of past training sessions, track attendance, and manage course details.
+
+These future features aim to make the platform more user-friendly and responsive to the needs of both parents and trainers.
 
 ## User Flow
 1. Parent visits the website and browses available courses and schedules.
