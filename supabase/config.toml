@@ -1,0 +1,16 @@
+[project]
+id = "otterly-fun"
+name = "Otterly Fun Swim School"
+
+[api]
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public"]
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+site_url = "http://localhost:3000"
+enable_signup = true
