@@ -44,13 +44,13 @@ export function CourseCard({ course }: { course: CourseWithSessions }) {
 
         <div className="flex items-center justify-between">
           <span className={`text-sm font-medium ${totalSpots > 0 ? "text-green-600" : "text-red-600"}`}>
-            {totalSpots > 0 ? `${totalSpots} spots available` : "Fully booked"}
+            {totalSpots > 0 ? `${totalSpots} platser kvar` : "Fullbokad"}
           </span>
           <Link
             href={`/courses/${course.id}`}
             className="bg-[#0077b6] text-white px-4 py-2 rounded-lg hover:bg-[#005f8d] transition-colors text-sm font-medium"
           >
-            View Details
+            Visa detaljer
           </Link>
         </div>
       </div>

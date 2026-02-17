@@ -17,44 +17,44 @@ type BookingConfirmationData = {
 
 export async function sendBookingConfirmation(data: BookingConfirmationData) {
   const { error } = await resend.emails.send({
-    from: "Otterly Fun Swim School <noreply@otterlyfun.se>",
+    from: "Utterns simskola <noreply@utternssimskola.se>",
     to: data.parentEmail,
-    subject: `Booking Confirmed: ${data.courseName}`,
+    subject: `Bokningsbekräftelse: ${data.courseName}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h1 style="color: #0077b6;">🦦 Booking Confirmed!</h1>
-        <p>Hi ${data.parentName},</p>
-        <p>Thank you for booking a spot at Otterly Fun Swim School! Here are your booking details:</p>
+        <h1 style="color: #0077b6;">🦦 Bokning bekräftad!</h1>
+        <p>Hej ${data.parentName},</p>
+        <p>Tack för din bokning hos Utterns simskola! Här är dina bokningsuppgifter:</p>
         
         <div style="background: #f0f9ff; border-radius: 8px; padding: 20px; margin: 20px 0;">
           <h2 style="color: #0077b6; margin-top: 0;">${data.courseName}</h2>
-          <p><strong>Child:</strong> ${data.childName}</p>
-          <p><strong>Day:</strong> ${data.sessionDay}</p>
-          <p><strong>Time:</strong> ${data.sessionTime}</p>
+          <p><strong>Barn:</strong> ${data.childName}</p>
+          <p><strong>Dag:</strong> ${data.sessionDay}</p>
+          <p><strong>Tid:</strong> ${data.sessionTime}</p>
           <p><strong>Period:</strong> ${data.startDate} – ${data.endDate}</p>
-          <p><strong>Price:</strong> ${data.price}</p>
-          ${data.location ? `<p><strong>Location:</strong> ${data.location}</p>` : ""}
+          <p><strong>Pris:</strong> ${data.price}</p>
+          ${data.location ? `<p><strong>Plats:</strong> ${data.location}</p>` : ""}
         </div>
 
-        <h3 style="color: #0077b6;">Payment Information</h3>
-        <p>Please transfer <strong>${data.price}</strong> to the following account:</p>
+        <h3 style="color: #0077b6;">Betalningsinformation</h3>
+        <p>Vänligen överför <strong>${data.price}</strong> till följande konto:</p>
         <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin: 16px 0;">
           <p><strong>Bank:</strong> Swedbank</p>
           <p><strong>Bankgiro:</strong> 1234-5678</p>
-          <p><strong>Reference:</strong> ${data.childName}</p>
+          <p><strong>Referens:</strong> ${data.childName}</p>
         </div>
 
-        <h3 style="color: #0077b6;">What to Bring</h3>
+        <h3 style="color: #0077b6;">Att ta med</h3>
         <ul>
-          <li>Swimsuit and towel</li>
-          <li>Swim diaper (for babies)</li>
-          <li>Positive attitude! 🌊</li>
+          <li>Badkläder och handduk</li>
+          <li>Badblöja (för bebisar)</li>
+          <li>Gott humör! 🌊</li>
         </ul>
 
-        <p>If you have any questions, reply to this email or contact us at <a href="mailto:info@otterlyfun.se">info@otterlyfun.se</a>.</p>
+        <p>Har du frågor? Svara på det här mailet eller kontakta oss på <a href="mailto:info@utternssimskola.se">info@utternssimskola.se</a>.</p>
         
         <p style="color: #6b7280; font-size: 14px; margin-top: 40px;">
-          — Otterly Fun Swim School 🦦
+          — Utterns simskola 🦦
         </p>
       </div>
     `,

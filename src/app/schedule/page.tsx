@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
-  title: "Schedule",
+  title: "Schema",
   description:
-    "View the weekly schedule for all Otterly Fun swim courses and find a session that fits your family.",
+    "Se veckoschemat för alla Utterns simskolas kurser och hitta en tid som passar er familj.",
 };
 
 export default async function SchedulePage() {
@@ -41,13 +41,13 @@ export default async function SchedulePage() {
   }
 
   const dayOrder = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
+    "Måndag",
+    "Tisdag",
+    "Onsdag",
+    "Torsdag",
+    "Fredag",
+    "Lördag",
+    "Söndag",
   ];
 
   // Group sessions by day
@@ -73,10 +73,10 @@ export default async function SchedulePage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#0077b6] to-[#00b4d8] text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold mb-4">Weekly Schedule</h1>
+          <h1 className="text-4xl font-bold mb-4">Veckoschema</h1>
           <p className="text-lg text-blue-100 max-w-2xl">
-            Find a time that works for your family. Sessions run on a recurring
-            weekly basis during the course period.
+            Hitta en tid som passar er familj. Lektionerna återkommer varje
+            vecka under kursperioden.
           </p>
         </div>
       </section>
@@ -85,15 +85,15 @@ export default async function SchedulePage() {
       <section className="py-4 bg-gray-50 border-b">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 items-center">
-            <span className="text-sm text-gray-500 font-medium">Levels:</span>
+            <span className="text-sm text-gray-500 font-medium">Nivåer:</span>
             <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-              Beginner
+              Nybörjare
             </span>
             <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-              Intermediate
+              Fortsättning
             </span>
             <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
-              Advanced
+              Avancerad
             </span>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default async function SchedulePage() {
                                 href={`/courses/${course?.id}`}
                                 className="font-semibold text-gray-900 hover:text-[#0077b6] transition-colors"
                               >
-                                {course?.title || "Unknown Course"}
+                                {course?.title || "Okänd kurs"}
                               </Link>
                               {course && (
                                 <span
@@ -181,15 +181,15 @@ export default async function SchedulePage() {
                             }`}
                           >
                             {isFull
-                              ? "Full"
-                              : `${session.spots_available} spots`}
+                              ? "Fullbokad"
+                              : `${session.spots_available} platser`}
                           </span>
                           {!isFull && course && (
                             <Link
                               href={`/courses/${course.id}/book?session=${session.id}`}
                               className="bg-[#0077b6] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#005f8d] transition-colors"
                             >
-                              Book
+                              Boka
                             </Link>
                           )}
                         </div>
@@ -204,10 +204,10 @@ export default async function SchedulePage() {
           {(!sessions || sessions.length === 0) && (
             <div className="text-center py-12">
               <p className="text-xl text-gray-500 mb-4">
-                No sessions scheduled at the moment.
+                Inga tillfällen schemalagda just nu.
               </p>
               <p className="text-gray-400">
-                Check back soon — new sessions are added regularly!
+                Kolla tillbaka snart — nya tillfällen läggs till regelbundet!
               </p>
             </div>
           )}

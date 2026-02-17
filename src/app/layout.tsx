@@ -17,17 +17,17 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Otterly Fun Swim School",
-    template: "%s | Otterly Fun Swim School",
+    default: "Utterns simskola",
+    template: "%s | Utterns simskola",
   },
   description:
-    "Teaching children to swim with confidence and joy. Book swimming lessons for your child in Stockholm.",
+    "En liten och personlig simskola i Kolmården. Simundervisning för barn i små grupper med trygghet och glädje.",
   openGraph: {
-    title: "Otterly Fun Swim School",
+    title: "Utterns simskola",
     description:
-      "Teaching children to swim with confidence and joy in Stockholm.",
+      "En liten och personlig simskola i Kolmården — simundervisning i små grupper.",
     type: "website",
-    locale: "en_SE",
+    locale: "sv_SE",
   },
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="sv">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >

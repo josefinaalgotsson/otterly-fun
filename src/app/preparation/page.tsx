@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Preparation Tips",
+  title: "Förberedelser",
   description:
-    "Everything you need to know to prepare your child for swim lessons at Otterly Fun Swim School.",
+    "Allt du behöver veta för att förbereda ditt barn inför simlektionerna hos Utterns simskola.",
 };
 
 export default function PreparationPage() {
@@ -13,51 +13,51 @@ export default function PreparationPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#0077b6] to-[#00b4d8] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold mb-4">Preparation Tips</h1>
+          <h1 className="text-4xl font-bold mb-4">Förberedelser</h1>
           <p className="text-lg text-blue-100">
-            Help your child get the most out of their swim lessons with these
-            simple tips.
+            Hjälp ditt barn att få ut det mesta av sina simlektioner med dessa
+            enkla tips.
           </p>
         </div>
       </section>
 
-      {/* What to Bring */}
+      {/* Vad ska man ta med */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            What to Bring
+            Att ta med
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 emoji: "👙",
-                title: "Swimwear",
-                desc: "A well-fitting swimsuit or swim trunks. For babies, a swim diaper is required.",
+                title: "Badkläder",
+                desc: "Välsittande baddräkt eller badbyxor. För bebisar krävs badblöja.",
               },
               {
                 emoji: "🥽",
-                title: "Goggles (optional)",
-                desc: "Goggles can help children who are sensitive to water in their eyes. Not required for baby classes.",
+                title: "Simglasögon (valfritt)",
+                desc: "Simglasögon kan hjälpa barn som är känsliga för vatten i ögonen. Behövs inte för babyklasser.",
               },
               {
                 emoji: "🧴",
-                title: "Towel & Shampoo",
-                desc: "A large, warm towel for after the lesson. Shampoo and shower gel for rinsing off chlorine.",
+                title: "Handduk & schampo",
+                desc: "En stor, varm handduk efter lektionen. Schampo och duschkräm för att skölja bort klor.",
               },
               {
                 emoji: "🍌",
-                title: "Light Snack",
-                desc: "A small, healthy snack for after the lesson. Avoid heavy meals within an hour before swimming.",
+                title: "Litet mellanmål",
+                desc: "Ett litet, nyttigt mellanmål efter lektionen. Undvik tunga måltider inom en timme innan simningen.",
               },
               {
                 emoji: "🩴",
-                title: "Flip-flops / Sandals",
-                desc: "Non-slip poolside shoes for walking to and from the changing rooms.",
+                title: "Flipflops / sandaler",
+                desc: "Halkfria skor vid bassängkanten för att gå till och från omklädningsrummen.",
               },
               {
                 emoji: "🔒",
-                title: "Locker Coin",
-                desc: "Our lockers accept 10 SEK coins. Bring one or use the coin machine at the facility.",
+                title: "Skåpmynt",
+                desc: "Våra skåp tar 10-kronor. Ta med ett eller använd växlingsmaskinen i anläggningen.",
               },
             ].map((item) => (
               <div
@@ -77,38 +77,38 @@ export default function PreparationPage() {
         </div>
       </section>
 
-      {/* Before the First Lesson */}
+      {/* Innan första lektionen */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Before the First Lesson
+            Innan första lektionen
           </h2>
           <div className="space-y-6">
             {[
               {
                 step: "1",
-                title: "Talk about swimming positively",
-                desc: "Build excitement! Talk about how fun it will be to splash and play in the water. Avoid mentioning fears or dangers — keep it positive.",
+                title: "Prata positivt om simning",
+                desc: "Bygg upp förväntan! Berätta hur kul det kommer bli att plaska och leka i vattnet. Undvik att nämna rädslor eller faror — håll det positivt.",
               },
               {
                 step: "2",
-                title: "Practice at home",
-                desc: "Let your child play with water in the bath. Practice putting their face near the water, blowing bubbles, and getting their hair wet.",
+                title: "Öva hemma",
+                desc: "Låt ditt barn leka med vatten i badkaret. Öva på att hålla ansiktet nära vattnet, blåsa bubblor och väta håret.",
               },
               {
                 step: "3",
-                title: "Visit the pool beforehand",
-                desc: "If possible, visit the pool before the first class so your child feels familiar with the environment.",
+                title: "Besök badhuset innan",
+                desc: "Om det är möjligt, besök badhuset före första lektionen så att ditt barn känner igen miljön.",
               },
               {
                 step: "4",
-                title: "Arrive early",
-                desc: "Plan to arrive 15 minutes before the lesson starts. This gives time to change, use the bathroom, and settle in without rushing.",
+                title: "Kom i god tid",
+                desc: "Planera att komma 15 minuter innan lektionen börjar. Det ger tid att byta om, gå på toaletten och komma till ro utan stress.",
               },
               {
                 step: "5",
-                title: "Set realistic expectations",
-                desc: "The first lesson is about getting comfortable. Don't worry if your child cries or seems unsure — this is completely normal and our instructors are used to it!",
+                title: "Ha realistiska förväntningar",
+                desc: "Första lektionen handlar om att bli bekväm. Oroa dig inte om ditt barn gråter eller verkar osäkert — det är helt normalt och våra instruktörer är vana vid det!",
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-6 items-start">
@@ -127,70 +127,70 @@ export default function PreparationPage() {
         </div>
       </section>
 
-      {/* During the Lesson */}
+      {/* Under lektionen */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            During the Lesson
+            Under lektionen
           </h2>
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 md:p-8 space-y-4">
             <div className="flex gap-3 items-start">
               <span className="text-xl">👋</span>
               <p className="text-gray-700">
-                <strong>For baby classes (Little Otters):</strong> You will be
-                in the water with your child. Wear your own swimwear and be
-                ready to follow the instructor&apos;s guidance.
+                <strong>För babyklasser (Små Uttrar):</strong> Du är med i
+                vattnet tillsammans med ditt barn. Ha egna badkläder och var
+                beredd att följa instruktörens vägledning.
               </p>
             </div>
             <div className="flex gap-3 items-start">
               <span className="text-xl">👀</span>
               <p className="text-gray-700">
-                <strong>For all other classes:</strong> Parents watch from the
-                viewing area. Try to stay visible so your child can see you,
-                but avoid waving or calling out — it can be distracting.
+                <strong>För alla andra klasser:</strong> Föräldrar tittar på
+                från läktaren. Försök vara synlig så ditt barn kan se dig, men
+                undvik att vinka eller ropa — det kan vara distraherande.
               </p>
             </div>
             <div className="flex gap-3 items-start">
               <span className="text-xl">😌</span>
               <p className="text-gray-700">
-                <strong>Stay calm and positive.</strong> If your child is upset,
-                trust the instructor. They are experienced in helping nervous
-                swimmers feel comfortable.
+                <strong>Var lugn och positiv.</strong> Om ditt barn blir
+                ledset, lita på instruktören. De har stor erfarenhet av att
+                hjälpa nervösa simmare känna sig trygga.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* After the Lesson */}
+      {/* Efter lektionen */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            After the Lesson
+            Efter lektionen
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <span className="text-3xl block mb-3">🎉</span>
-              <h3 className="font-semibold mb-2">Celebrate!</h3>
+              <h3 className="font-semibold mb-2">Fira!</h3>
               <p className="text-sm text-gray-600">
-                Tell your child how proud you are, regardless of how the
-                lesson went. Every step is progress.
+                Berätta för ditt barn hur stolt du är, oavsett hur lektionen
+                gick. Varje steg framåt är framsteg.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <span className="text-3xl block mb-3">🚿</span>
-              <h3 className="font-semibold mb-2">Rinse Off</h3>
+              <h3 className="font-semibold mb-2">Skölj av</h3>
               <p className="text-sm text-gray-600">
-                Shower and rinse off chlorine right after class. Use
-                moisturizer if your child has sensitive skin.
+                Duscha och skölj bort kloret direkt efter lektionen. Använd
+                fuktkräm om ditt barn har känslig hud.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <span className="text-3xl block mb-3">💬</span>
-              <h3 className="font-semibold mb-2">Talk About It</h3>
+              <h3 className="font-semibold mb-2">Prata om det</h3>
               <p className="text-sm text-gray-600">
-                Ask your child what they enjoyed. This helps reinforce
-                positive associations with swimming.
+                Fråga ditt barn vad det tyckte var roligast. Det hjälper till
+                att skapa positiva associationer med simning.
               </p>
             </div>
           </div>
@@ -201,16 +201,16 @@ export default function PreparationPage() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
+            Redo att börja?
           </h2>
           <p className="text-gray-600 mb-6">
-            Browse our courses and book your child&apos;s first lesson today.
+            Se våra kurser och boka ditt barns första lektion redan idag.
           </p>
           <Link
             href="/courses"
             className="bg-[#0077b6] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#005f8d] transition-colors inline-block"
           >
-            View Courses →
+            Se kurser →
           </Link>
         </div>
       </section>

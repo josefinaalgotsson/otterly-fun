@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .eq("id", id)
     .single();
 
-  if (!course) return { title: "Course Not Found" };
+  if (!course) return { title: "Kursen hittades inte" };
 
   return {
     title: course.title,
@@ -89,7 +89,7 @@ export default async function CourseDetailPage({ params }: Props) {
             href="/courses"
             className="text-blue-200 hover:text-white transition-colors mb-4 inline-block"
           >
-            ← Back to Courses
+            ← Tillbaka till kurser
           </Link>
           <div className="flex items-start gap-4">
             <div>
@@ -106,7 +106,7 @@ export default async function CourseDetailPage({ params }: Props) {
                 {formatPrice(typedCourse.price_cents)}
                 <span className="text-base font-normal text-blue-200">
                   {" "}
-                  / course
+                  / kurs
                 </span>
               </p>
             </div>
@@ -124,7 +124,7 @@ export default async function CourseDetailPage({ params }: Props) {
               {typedCourse.prerequisites && (
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    Prerequisites
+                    Förkunskaper
                   </h2>
                   <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
                     <p className="text-gray-700">{typedCourse.prerequisites}</p>
@@ -136,7 +136,7 @@ export default async function CourseDetailPage({ params }: Props) {
               {typedCourse.goals && (
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    What Your Child Will Learn
+                    Vad ditt barn kommer lära sig
                   </h2>
                   <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
                     <p className="text-gray-700">{typedCourse.goals}</p>
@@ -147,7 +147,7 @@ export default async function CourseDetailPage({ params }: Props) {
               {/* Sessions */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Available Sessions
+                  Tillgängliga tillfällen
                 </h2>
                 {typedCourse.course_sessions && typedCourse.course_sessions.length > 0 ? (
                   <div className="space-y-4">
@@ -192,7 +192,7 @@ export default async function CourseDetailPage({ params }: Props) {
                                 </p>
                                 {session.trainers && (
                                   <p className="text-sm text-gray-500 mt-1">
-                                    Instructor: {session.trainers.full_name}
+                                    Instruktör: {session.trainers.full_name}
                                   </p>
                                 )}
                               </div>
@@ -203,19 +203,19 @@ export default async function CourseDetailPage({ params }: Props) {
                                   }`}
                                 >
                                   {isFull
-                                    ? "Full"
-                                    : `${session.spots_available} spots left`}
+                                    ? "Fullbokad"
+                                    : `${session.spots_available} platser kvar`}
                                 </p>
                                 {!isFull ? (
                                   <Link
                                     href={`/courses/${id}/book?session=${session.id}`}
                                     className="bg-[#0077b6] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#005f8d] transition-colors inline-block"
                                   >
-                                    Book Now
+                                    Boka nu
                                   </Link>
                                 ) : (
                                   <span className="text-gray-400 text-sm">
-                                    No spots available
+                                    Inga platser kvar
                                   </span>
                                 )}
                               </div>
@@ -227,7 +227,7 @@ export default async function CourseDetailPage({ params }: Props) {
                   </div>
                 ) : (
                   <p className="text-gray-500">
-                    No sessions scheduled at the moment. Check back soon!
+                    Inga tillfällen är schemalagda just nu. Kolla tillbaka snart!
                   </p>
                 )}
               </div>
@@ -236,30 +236,30 @@ export default async function CourseDetailPage({ params }: Props) {
             {/* Sidebar */}
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 sticky top-24">
-                <h3 className="font-semibold text-lg mb-4">Course Details</h3>
+                <h3 className="font-semibold text-lg mb-4">Kursdetaljer</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-500">Level</span>
+                    <span className="text-gray-500">Nivå</span>
                     <span className="font-medium">
                       {typedCourse.level.charAt(0).toUpperCase() +
                         typedCourse.level.slice(1)}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-500">Price</span>
+                    <span className="text-gray-500">Pris</span>
                     <span className="font-medium">
                       {formatPrice(typedCourse.price_cents)}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-500">Max Participants</span>
+                    <span className="text-gray-500">Max deltagare</span>
                     <span className="font-medium">
                       {typedCourse.max_participants}
                     </span>
                   </div>
                   {typedCourse.location && (
                     <div className="flex justify-between">
-                      <span className="text-gray-500">Location</span>
+                      <span className="text-gray-500">Plats</span>
                       <span className="font-medium">{typedCourse.location}</span>
                     </div>
                   )}

@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/courses", label: "Courses" },
-  { href: "/schedule", label: "Schedule" },
-  { href: "/about", label: "About" },
-  { href: "/preparation", label: "Preparation" },
+  { href: "/", label: "Hem" },
+  { href: "/courses", label: "Kurser" },
+  { href: "/schedule", label: "Schema" },
+  { href: "/about", label: "Om oss" },
+  { href: "/preparation", label: "Förberedelser" },
 ];
 
 export function Header() {
@@ -16,7 +16,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl">🦦</span>
             <span className="text-xl font-bold text-[#0077b6]">
-              Otterly Fun
+              Utterns simskola
             </span>
           </Link>
 
@@ -37,12 +37,12 @@ export function Header() {
               href="/courses"
               className="bg-[#0077b6] text-white px-4 py-2 rounded-lg hover:bg-[#005f8d] transition-colors font-medium text-sm"
             >
-              Book Now
+              Boka nu
             </Link>
             <Link
               href="/dashboard"
               className="text-gray-400 hover:text-gray-600 transition-colors text-sm"
-              title="Trainer Login"
+              title="Instruktörsinloggning"
             >
               🔐
             </Link>

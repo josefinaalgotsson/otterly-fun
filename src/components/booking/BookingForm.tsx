@@ -59,12 +59,12 @@ export default function BookingForm({
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Booking failed");
+        throw new Error(data.error || "Bokningen misslyckades");
       }
 
       router.push("/booking/confirmation");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong");
+      setError(err instanceof Error ? err.message : "Något gick fel");
     } finally {
       setLoading(false);
     }
@@ -82,7 +82,7 @@ export default function BookingForm({
           htmlFor="session"
           className="block text-sm font-medium text-gray-700 mb-1"
         >
-          Select Session *
+          Välj tillfälle *
         </label>
         <select
           id="session"
@@ -100,48 +100,48 @@ export default function BookingForm({
       </div>
 
       <fieldset className="space-y-4">
-        <legend className="text-lg font-semibold text-gray-800 mb-2">Parent / Guardian</legend>
+        <legend className="text-lg font-semibold text-gray-800 mb-2">Vårdnadshavare</legend>
         <div>
-          <label htmlFor="parentName" className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+          <label htmlFor="parentName" className="block text-sm font-medium text-gray-700 mb-1">Fullständigt namn *</label>
           <input type="text" name="parentName" id="parentName" required
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#0077b6] focus:border-transparent outline-none" />
         </div>
         <div>
-          <label htmlFor="parentEmail" className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+          <label htmlFor="parentEmail" className="block text-sm font-medium text-gray-700 mb-1">E-post *</label>
           <input type="email" name="parentEmail" id="parentEmail" required
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#0077b6] focus:border-transparent outline-none" />
         </div>
         <div>
-          <label htmlFor="parentPhone" className="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+          <label htmlFor="parentPhone" className="block text-sm font-medium text-gray-700 mb-1">Telefon *</label>
           <input type="tel" name="parentPhone" id="parentPhone" required
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#0077b6] focus:border-transparent outline-none" />
         </div>
       </fieldset>
 
       <fieldset className="space-y-4">
-        <legend className="text-lg font-semibold text-gray-800 mb-2">Child</legend>
+        <legend className="text-lg font-semibold text-gray-800 mb-2">Barn</legend>
         <div>
-          <label htmlFor="childName" className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+          <label htmlFor="childName" className="block text-sm font-medium text-gray-700 mb-1">Fullständigt namn *</label>
           <input type="text" name="childName" id="childName" required
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#0077b6] focus:border-transparent outline-none" />
         </div>
         <div>
-          <label htmlFor="childDob" className="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+          <label htmlFor="childDob" className="block text-sm font-medium text-gray-700 mb-1">Födelsedatum</label>
           <input type="date" name="childDob" id="childDob"
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#0077b6] focus:border-transparent outline-none" />
         </div>
         <div>
-          <label htmlFor="swimmingLevel" className="block text-sm font-medium text-gray-700 mb-1">Swimming Level</label>
+          <label htmlFor="swimmingLevel" className="block text-sm font-medium text-gray-700 mb-1">Simnivå</label>
           <select name="swimmingLevel" id="swimmingLevel"
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#0077b6] focus:border-transparent outline-none">
-            <option value="none">No experience</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
+            <option value="none">Ingen erfarenhet</option>
+            <option value="beginner">Nybörjare</option>
+            <option value="intermediate">Fortsättning</option>
+            <option value="advanced">Avancerad</option>
           </select>
         </div>
         <div>
-          <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-1">Notes (allergies, special needs, etc.)</label>
+          <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-1">Övrig information (allergier, särskilda behov m.m.)</label>
           <textarea name="notes" id="notes" rows={3}
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#0077b6] focus:border-transparent outline-none" />
         </div>
@@ -158,7 +158,7 @@ export default function BookingForm({
         disabled={loading}
         className="w-full bg-[#0077b6] text-white py-3 rounded-lg hover:bg-[#005f8d] transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {loading ? "Booking..." : "Confirm Booking"}
+        {loading ? "Bokar..." : "Bekräfta bokning"}
       </button>
     </form>
   );

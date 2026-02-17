@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import BookingForm from "@/components/booking/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Book a Spot",
+  title: "Boka en plats",
 };
 
 type Props = {
@@ -54,9 +54,9 @@ export default async function BookingPage({ params, searchParams }: Props) {
             href={`/courses/${courseId}`}
             className="text-blue-200 hover:text-white transition-colors mb-4 inline-block"
           >
-            ← Back to {course.title}
+            ← Tillbaka till {course.title}
           </Link>
-          <h1 className="text-3xl font-bold mb-2">Book a Spot</h1>
+          <h1 className="text-3xl font-bold mb-2">Boka en plats</h1>
           <p className="text-blue-100">
             {course.title} — {formatPrice(course.price_cents)}
           </p>
@@ -72,20 +72,20 @@ export default async function BookingPage({ params, searchParams }: Props) {
               courseTitle={course.title}
               sessions={sessions.map((s) => ({
                 id: s.id,
-                label: `${s.day_of_week}s ${s.start_time}–${s.end_time} (${new Date(s.start_date).toLocaleDateString("sv-SE")} → ${new Date(s.end_date).toLocaleDateString("sv-SE")}) — ${s.spots_available} spots left`,
+                label: `${s.day_of_week}ar ${s.start_time}–${s.end_time} (${new Date(s.start_date).toLocaleDateString("sv-SE")} → ${new Date(s.end_date).toLocaleDateString("sv-SE")}) — ${s.spots_available} platser kvar`,
               }))}
               preselectedSessionId={sessionId}
             />
           ) : (
             <div className="text-center py-12">
               <p className="text-xl text-gray-500 mb-4">
-                Sorry, all sessions for this course are currently full.
+                Tyvärr är alla tillfällen för denna kurs fullbokade just nu.
               </p>
               <Link
                 href="/courses"
                 className="text-[#0077b6] font-medium hover:underline"
               >
-                Browse other courses →
+                Se andra kurser →
               </Link>
             </div>
           )}

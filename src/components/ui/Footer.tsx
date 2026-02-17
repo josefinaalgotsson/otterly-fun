@@ -9,52 +9,52 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🦦</span>
               <span className="text-lg font-bold text-[#0077b6]">
-                Otterly Fun Swim School
+                Utterns simskola
               </span>
             </div>
             <p className="text-gray-600 text-sm">
-              Teaching children to swim with confidence and joy in Stockholm.
+              En liten och personlig simskola i Kolmården — simundervisning med trygghet och glädje.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-800 mb-3">Quick Links</h3>
+            <h3 className="font-semibold text-gray-800 mb-3">Snabblänkar</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/courses" className="text-gray-600 hover:text-[#0077b6] text-sm">
-                  Our Courses
+                  Våra kurser
                 </Link>
               </li>
               <li>
                 <Link href="/schedule" className="text-gray-600 hover:text-[#0077b6] text-sm">
-                  Schedule
+                  Schema
                 </Link>
               </li>
               <li>
                 <Link href="/preparation" className="text-gray-600 hover:text-[#0077b6] text-sm">
-                  Preparation Tips
+                  Förberedelser
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-gray-600 hover:text-[#0077b6] text-sm">
-                  About Us
+                  Om oss
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-800 mb-3">Contact</h3>
+            <h3 className="font-semibold text-gray-800 mb-3">Kontakt</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>📍 Simhallsgatan 12, Stockholm</li>
-              <li>📧 info@otterlyfun.se</li>
+              <li>📍 Simhallsgatan 12, Kolmården</li>
+              <li>📧 info@utternssimskola.se</li>
               <li>📞 +46 70 123 45 67</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Otterly Fun Swim School. All rights reserved.
+          © {new Date().getFullYear()} Utterns simskola. Alla rättigheter förbehållna.
         </div>
       </div>
     </footer>
